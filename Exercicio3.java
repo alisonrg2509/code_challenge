@@ -2,9 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String teste = "Olá 2025!";
+        Scanner scanner = new Scanner(System.in);
         
-        count(teste);
+        System.out.println("Digite uma frase para contar os caracteres:");
+        String frase = scanner.nextLine();
+        
+        count(frase);
+        
+        scanner.close();
     }
 
     public static void count(String x) {
@@ -17,20 +22,20 @@ public class Main {
         
         for (int i = 0; i < x.length(); i++) {
             if (Character.isLetter(ch[i])) {
-                letras++;
+                letras++; 
             }
             else if (Character.isDigit(ch[i])) {
-                numeros++;
+                numeros++; 
             }
             else if (Character.isSpaceChar(ch[i])) {
-                espacos++;
+                espacos++; 
             }
             else {
-                outros++;
+                outros++; 
             }
         }
         
-        System.out.println("Olá 2025!");
+        System.out.println("Frase: " + x);
         System.out.println("Letras: " + letras);
         System.out.println("Espaços: " + espacos);
         System.out.println("Números: " + numeros);
