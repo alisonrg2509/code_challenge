@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Exercicio2 {
+public class Main {
   
     private static final double raio = 7.5;
 
